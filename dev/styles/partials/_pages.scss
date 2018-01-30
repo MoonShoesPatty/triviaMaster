@@ -1,0 +1,29 @@
+/* ----- PAGE SECTION -----*/
+
+.landingPage, .categoryPage, .questionPage, .resultPage {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	position: absolute;
+	width: 100vw;
+	left: 100vw;
+	transition: left 0.7s cubic-bezier(0, 0, 0.1, 1);
+}
+
+.active {
+	left: 0;
+}
+
+.removing {
+	left: -100vw;
+}
+
+@keyframes slideIn {
+	0% {
+		left: 100vw;
+	}
+	100% {
+		left: 0;
+	}
+}
