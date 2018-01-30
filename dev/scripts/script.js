@@ -1,7 +1,15 @@
-const page = document.querySelector('#landingPage');
+const links = Array.from(document.getElementsByTagName('a'));
+links.map(link => {
+	link.addEventListener('click', clickLink)
+})
 
-page.addEventListener('click', gonuts)
+let currentPage = document.getElementById('landingPage');
 
-function gonuts() {
-    console.log('WHADDAP')
+function clickLink(event) {
+	event.preventDefault();
+
+	// Change current page based on data-dest attribute
+	currentPage.classList.remove('active');
+	currentPage = document.getElementById(event.target.dataset.dest);
+	currentPage.classList.add('active');
 }
