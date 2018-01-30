@@ -8,18 +8,33 @@
 	<link rel="stylesheet" href="./public/styles/style.css">
 </head>
 <body>
+	<nav class="mainNav">
+		<img class="navLogo" src="./public/assets/logo.png" alt="">
+		<h2 class="navPageTitle"></h2>
+		<p>X</p>
+	</nav>
 	<div id="landingPage" class="landingPage active">
 		<h1>Trivia Master</h1>
 		<a class="pageChange" data-dest="categoryPage">Categories -></a>
 	</div>
 	<div id="categoryPage" class="categoryPage">
 		<h2>Categories</h2>
+		<a class="pageChange" data-dest="questionPage">Questions -></a>
 	</div>
 	<div id="questionPage" class="questionPage">
-
+		<h2>Questions</h2>
+		<a class="answerLink" data-dest="incorrect">Answer 1</a>
+		<a class="answerLink" data-dest="correct">Answer 2</a>
+		<div class="answerCorrect">
+			<p>Nice!</p>
+		</div>
+		<div class="answerIncorrect">
+			<p>Sorry :(</p>
+		</div>
 	</div>
 	<div id="resultPage" class="resultPage">
-
+		<h2>Results</h2>
+		<a class="answerLink" data-dest="categoryPage">Answer -></a>
 	</div>
 	<script src="./public/scripts/script.js"></script>
 </body>
